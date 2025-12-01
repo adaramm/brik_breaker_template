@@ -51,7 +51,8 @@ Implementar un juego funcional donde:
 │   └── render.c
 │   └── input.c
 ├── docs/
-│   └── especificacion.pdf
+│   └── BrickBreaker.pdf (especificaciones del programa)
+│   └── ColisionesPelota.psc (Algoritmos para la detección de las colilsiones y movimiento de la pelota)
 │
 ├── tests/
 │   ├── test_compile.sh
