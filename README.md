@@ -30,15 +30,26 @@ Implementar un juego funcional donde:
 
 ## 📂 Estructura del Repositorio
 
-
+```
 /
 ├── src/
 │   └── main.c
 │
 ├── docs/
-│   └── especificacion.pdf   (o especificacion.md)
+│   └── especificacion.pdf
+│
+├── tests/
+│   ├── test_compile.sh
+│   ├── test_files.sh
+│   ├── test_menu.sh
+│   └── run_tests.sh
+│
+├── .github/
+│   └── workflows/
+│       └── autograde.yml
 │
 └── README.md
+```
 
 
 ---
