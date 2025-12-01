@@ -34,7 +34,22 @@ Implementar un juego funcional donde:
 /
 ├── src/
 │   └── main.c
-│
+│   └── game.c
+│   └── ball.c
+│   └── brick.c
+│   └── paddle.c
+│   └── score.c
+│   └── render.c
+│   └── input.c
+├── inclue/
+│   └── library_compat.c
+│   └── game.c
+│   └── ball.c
+│   └── brick.c
+│   └── paddle.c
+│   └── score.c
+│   └── render.c
+│   └── input.c
 ├── docs/
 │   └── especificacion.pdf
 │
@@ -68,8 +83,10 @@ Implementar un juego funcional donde:
 
 ## ▶️ ¿Cómo compilar?
 
+Se debe compilar desde la carpeta principal, es decir; en la carpeta superior a src e include
+
 ```bash
-gcc src/main.c -o juego
+gcc src/*.c -Iinclude -o juego
 ./juego
 ```
 ---
@@ -137,4 +154,6 @@ Igual al documento que tenemos en el pdf
 - Lógica de colisión
 
 ```
+
+
 
