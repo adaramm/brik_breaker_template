@@ -29,6 +29,8 @@ Implementar un juego funcional donde:
 ---
 
 ## 📂 Estructura del Repositorio
+
+
 /
 ├── src/
 │ └── main.c
@@ -58,6 +60,8 @@ Implementar un juego funcional donde:
 ```bash
 gcc src/main.c -o juego
 ./juego
+```
+---
 
 ## 🧱 Caracteres sugeridos
 
@@ -69,30 +73,21 @@ Pelota: O
 
 Bloque: []
 
-🧱 Caracteres sugeridos
 
-Paredes: #
-
-Plataforma: ====
-
-Pelota: O
-
-Bloque: []
-
-👍 Evaluación
+## 👍 Evaluación
 
 La rúbrica completa está en docs/especificacion.pdf.
 
-📬 Dudas
+## 📬 Dudas
 
-En caso de dudas, consulta a tu profesor o revisa nuevamente la especificación.
+En caso de dudas, consulta a tu profesora o revisa nuevamente la especificación.
 
 
 ---
 
 ## **📄 docs/especificacion.md**
 
-Si prefieres entregar un PDF, conviértelo, pero aquí está el contenido:
+Entregar un PDF, conviértelo, pero aquí está el contenido:
 
 ```markdown
 # Especificación del Proyecto: Brick Breaker en Consola
@@ -118,7 +113,7 @@ El estudiante debe implementar una versión del juego Brick Breaker con texto AS
 - Código claro y organizado
 
 ## 3. Análisis del Problema
-(… igual al documento que ya tienes en LaTeX)
+Igual al documento que tenemos en el pdf
 
 ## 4. Diseño
 (… secciones de análisis y diagramas)
@@ -130,7 +125,5 @@ El estudiante debe implementar una versión del juego Brick Breaker con texto AS
 - Lógica de rebote
 - Lógica de colisión
 
-## 6. Rúbrica
-(… igual a la que incluí en el documento LaTeX)
-
+```
 
