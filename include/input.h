@@ -1,6 +1,8 @@
 #ifndef INPUT_H
 #define INPUT_H
 
-char input_read();  // lee tecla
+// Devuelve la dirección del paddle:
+// -1 = izquierda, 1 = derecha, 0 = nada
+int input_update();
 
 #endif
