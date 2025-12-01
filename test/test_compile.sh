@@ -1,13 +1,27 @@
 #!/bin/bash
 
-echo "[TEST] Compilando proyecto..."
+echo "Compilando con estructura include/ y src/..."
 
-gcc src/main.c src/brick.c -o juego 2> compile_errors.txt
+gcc -Wall -Wextra -std=c11 \
+    ../src/*.c \
+    test_structure.c \
+    -I../include \
+    -o test_structure_run
 
-if [ $? -ne 0 ]; then
-    echo "[ERROR] No compila. Revisa syntax."
-    cat compile_errors.txt
-    exit 1
-fi
+[ $? -ne 0 ] && echo "❌ No compila test_structure" && exit 1
 
-echo "[PASS] Compilación exitosa."
+gcc -Wall -Wextra -std=c11 ../src/*.c test_logic_ball.c     -I../include -o test_ball
+gcc -Wall -Wextra -std=c11 ../src/*.c test_logic_paddle.c  -I../include -o test_paddle
+gcc -Wall -Wextra -std=c11 ../src/*.c test_logic_bricks.c  -I../include -o test_bricks
+gcc -Wall -Wextra -std=c11 ../src/*.c test_logic_score.c   -I../include -o test_score
+
+echo "Ejecutando tests..."
+
+./test_structure_run || exit 1
+./test_ball          || exit 1
+./test_paddle        || exit 1
+./test_bricks        || exit 1
+./test_score         || exit 1
+
+echo "✅ TODOS LOS TESTS PASARON"
+exit 0
