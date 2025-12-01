@@ -1,40 +1,25 @@
 #include <stdio.h>
-#include "menu.h"
 #include "game.h"
 #include "score.h"
 
 int main() {
-    int option;
+    // Inicializa el sistema de puntajes y crea el archivo si no existe.
+    // TODO: Se debe completar esta función en score.c
+    score_init("scores.txt");
 
-    score_load("scores.txt");
+    // Inicializa el juego (carga ladrillos, posiciones iniciales, etc.)
+    game_init();
 
-    do {
-        menu_show();
-        option = menu_get_option();
+    // Bucle principal del juego.
+    // TODO: Debe llamar a: input_update(), game_update(), render_frame().
+    // Se implementa en game.c
+    while (!game_is_over()) {
+        game_loop_step();
+    }
 
-        switch(option) {
-            case 1:
-                game_init();
-                while(!game_is_over()) {
-                    game_update();
-                    game_render();
-                }
-                score_save("scores.txt");
-                break;
-
-            case 2:
-                score_print();
-                break;
-
-            case 3:
-                printf("Saliendo del juego...\n");
-                break;
-
-            default:
-                printf("Opción inválida\n");
-        }
-
-    } while(option != 3);
+    // Guarda la puntuación del jugador al final del juego
+    // se implementa score_save()
+    score_save("scores.txt");
 
     return 0;
 }
