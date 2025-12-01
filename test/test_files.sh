@@ -4,6 +4,8 @@ echo "[TEST] Verificando archivos obligatorios..."
 
 FILES=(
     "src/main.c"
+    "src/brick.c"
+    "src/brick.h"
     "docs/especificacion.pdf"
     "README.md"
 )
