@@ -4,13 +4,11 @@
 // Inicializa todos los elementos del juego
 void game_init();
 
-// Lógica del juego
-void game_update();
+// Ejecuta un paso del ciclo principal del juego
+// Debe llamar internamente a input, updates y render
+void game_loop_step();
 
-// Dibuja todo en pantalla
-void game_render();
-
-// Indica si el juego terminó
+// Devuelve si el juego terminó
 int game_is_over();
 
 #endif
