@@ -1,7 +1,15 @@
 #include "ball.h"
-#include <stdio.h>
 
-// TODO: implementar pelota
-void ball_init() {}
-void ball_update() {}
-void ball_render() {}
+static Ball ball;
+
+void ball_init() {
+    // TODO: posicionar la pelota al centro y darle velocidad inicial
+}
+
+void ball_update() {
+    // TODO: mover la pelota y actualizar colisiones generales
+}
+
+Ball* ball_get() {
+    return &ball;
+}
